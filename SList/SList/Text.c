@@ -10,9 +10,12 @@ void TestSList1()
 	SListPushBack(&plist, 33);
 	SListPushBack(&plist, 44);
 
-	SListFixedInsert(&plist, 3, 100);
+	printf("%d\n", FindNode(plist));
 
-	
+	SListFixedInsert(&plist, 5, 100);
+	SListPrint(plist);
+
+	SListFixedErase(&plist, 5);
 
 
 

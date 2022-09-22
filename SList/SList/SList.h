@@ -28,9 +28,6 @@ SLTNode* SListFind(SLTNode* phead, SLTDataType x);
 int SListFind1(SLTNode* pHead, SLTDataType x);
 //查找链表节点数量
 int FindNode(SLTNode* pHead);
-
-
-
 //固定位置插入(地址)
 void SListInsert(SLTNode** ppHead, SLTNode* pos, SLTDataType x);
 //固定位置删除（地址）

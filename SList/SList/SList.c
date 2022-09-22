@@ -22,6 +22,7 @@ SLTNode* BuySListNode(SLTDataType x)
 
 	return newnode;
 }
+
 //查找链表节点数量
 int FindNode(SLTNode* pHead)
 {
@@ -39,7 +40,6 @@ int FindNode(SLTNode* pHead)
 	return -1;
 	
 }
-
 
 //尾插
 void SListPushBack(SLTNode** ppHead, SLTDataType x)
@@ -216,7 +216,7 @@ void SListFixedInsert(SLTNode** ppHead, int pos, int x)
 {
 	SLTNode* newnode = BuySListNode(x);
 
-	if (pos<1 || pos>FindNode(*ppHead))
+	if (pos<1 || pos>FindNode(*ppHead)+1)
 	{
 		return;
 	}
@@ -227,23 +227,42 @@ void SListFixedInsert(SLTNode** ppHead, int pos, int x)
 	else
 	{
 		SLTNode* cur = *ppHead;
-		for (int i = 2; i < FindNode(*ppHead);i++)
+		for (int i = 2; i < pos;i++)
 		{
 			cur = cur->next;
 		}
 		newnode->next = cur->next;
 		cur->next = newnode;
+		
 	}
 
 }
 
-
-
-
 //固定位置删除（下标）
 void SListFixedErase(SLTNode** ppHead, int pos)
 {
-
+	SLTNode* cur = *ppHead;
+	SLTNode* prev = cur;
+	if (pos<1 || pos>FindNode(*ppHead))
+	{
+		return;
+	}
+	else if (pos == 1)
+	{
+		*ppHead=cur->next;
+		free(cur);
+	}
+	else
+	{
+		
+		for (int i = 2; i < pos; i++)
+		{
+			cur = cur->next;
+		}
+		prev = cur->next;
+		cur->next = cur->next->next;
+		free(prev);
+	}
 }
 
 
