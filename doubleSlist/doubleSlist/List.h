@@ -32,7 +32,10 @@ ListNode* ListFind(ListNode* pHead, LTDataType x);
 void ListInsert(ListNode* pos, LTDataType x);
 //删除pos位置的元素
 void ListErase(ListNode* pos);
-
+//在pos下标前插入元素
+void ListFixedInsert(ListNode* pHead, int pos, int x);
+//删除pos下标的元素
+void ListFixedErase(ListNode* pHead, int pos);
 
 
 

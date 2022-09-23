@@ -18,23 +18,7 @@ void TestList1()
 	 
 	ListPrint(plist);
 
-	ListNode* pos = ListFind(plist, 12);
-	if (pos != NULL)
-	{
-		//查找附带着修改作用
-		pos->data *= 10;
-		printf("找到了,并且节点的值*10\n");
-		//ListInsert(pos, 300);
-		ListErase(pos);
-	}
-	else
-	{
-		printf("没有找到\n");
-	}
-
-
-
-	
+	ListFixedErase(plist, 7);
 
 	ListPrint(plist);
 

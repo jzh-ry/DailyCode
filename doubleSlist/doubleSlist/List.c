@@ -130,7 +130,7 @@ ListNode* ListFind(ListNode* pHead, LTDataType x)
 
 }
 
-//查找位置
+//在pos位置前插入元素
 void ListInsert(ListNode* pos, LTDataType x)
 {
 	assert(pos);
@@ -156,5 +156,62 @@ void ListErase(ListNode* pos)
 	pos = NULL;
 
 }
+
+//在pos下标前插入元素
+void ListFixedInsert(ListNode* pHead, int pos, int x)
+{
+	assert(pos >= 1);
+	ListNode* newnode = BuyListNode(x);
+	ListNode* cur = pHead;
+	for (int i = 1; i < pos; i++)
+	{
+		if (cur->next != pHead)
+		{
+			cur = cur->next;
+		}
+		else
+		{
+			printf("请输入合法下标\n");
+			return;
+		}
+	}
+	ListNode* next = cur->next;
+	cur->next = newnode;
+	newnode->prev = cur;
+
+	newnode->next = next;
+	next->prev = newnode;
+
+
+}
+//删除pos下标的元素
+void ListFixedErase(ListNode* pHead, int pos)
+{
+	ListNode* cur = pHead->next;
+	assert(pos >= 1);
+	for (int i = 1; i < pos; i++)
+	{
+		if (cur->next != pHead)
+		{
+			cur = cur->next;
+		}
+		else
+		{
+			printf("请输入合法下标\n");
+			return;
+		}
+	}
+	ListNode* prev = cur->prev;
+	ListNode* next = cur->next;
+
+	prev->next = next;
+	next->prev = prev;
+	free(cur);
+
+
+
+}
+
+
 
 
