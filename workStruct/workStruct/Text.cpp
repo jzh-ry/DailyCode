@@ -1,5 +1,5 @@
 #include "structWork.h"
-
+#include "LinkList.h"
 
 
 
@@ -23,8 +23,33 @@ void TextlineList()
 
 }
 
+void TextLinkList()
+{
+	LL1* head = InitLinkList();
+
+	PushFrontList(head, 1);
+	PushFrontList(head, 2);
+	PushFrontList(head, 3);
+
+	PushBackList(head, 4);
+	PushBackList(head, 5);
+	PushBackList(head, 6);
+	PushBackList(head, 6);
+	PushBackList(head, 6);
+
+
+	printLinkList(head);
+	int o = LenList(head);
+	printf("%d\n", o);
+	printLinkList(head);
+
+	DestoryList(head);
+}
+
 int main(void)
 {
-	TextlineList();
+	//TextlineList();
+
+	TextLinkList();
 	return 0;
 }
