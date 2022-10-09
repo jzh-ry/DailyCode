@@ -1,7 +1,7 @@
 #include "structWork.h"
 #include "LinkList.h"
-
-
+#include "Stack.h"
+#include "Queue.h"
 
 void TextlineList()
 {
@@ -46,10 +46,67 @@ void TextLinkList()
 	DestoryList(head);
 }
 
+void TextStark()
+{
+	LS ls;
+	InitLineStack(ls);
+	PushLineStack(ls, 1);
+	PushLineStack(ls, 2);
+	PushLineStack(ls, 3);
+
+	JudgeEmpty(ls);
+	GetTopEmlm(ls);
+	PopLineStack(ls);
+
+	JudgeEmpty(ls);
+	GetTopEmlm(ls);
+	PopLineStack(ls);
+
+	JudgeEmpty(ls);
+	GetTopEmlm(ls);
+	PopLineStack(ls);
+
+	DestoryStack(ls);
+	PushLineStack(ls, 3);
+	GetTopEmlm(ls);
+	
+
+}
+
+void TextQueue()
+{
+	LQueue lq;
+	InitLineQueue(lq);
+	InsertBack(lq, 1);
+	InsertBack(lq, 2);
+	InsertBack(lq, 3);
+	InsertBack(lq, 4);
+	InsertBack(lq, 5);
+	InsertBack(lq, 6);
+	JudgeEmpty(lq);
+
+	printf("%d\n",FrontEmlm(lq));
+	GetEmlmNum(lq);
+
+	ClearLine(lq);
+	GetEmlmNum(lq);
+	InsertBack(lq, 4);
+	InsertBack(lq, 5);
+	InsertBack(lq, 6);
+
+	printf("%d\n", FrontEmlm(lq));
+	GetEmlmNum(lq);
+}
+
+
 int main(void)
 {
 	//TextlineList();
 
-	TextLinkList();
+	//TextLinkList();
+
+	//TextStark();
+
+	TextQueue();
 	return 0;
 }
