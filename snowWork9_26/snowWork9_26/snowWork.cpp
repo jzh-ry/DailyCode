@@ -308,120 +308,127 @@
 
 
 //3、
-#define INIT_SIZE 10
-//结构体
-typedef struct lineList
-{
-	int* data;
-	int size;
-	int sizelist;
-}LL;
-//初始化
-void InitList(LL* ps)
-{
-	ps->data = NULL;
-	ps->size = 0;
-	ps->sizelist = 0;
-}
-//扩容
-void CheckCapacity(LL* ps)
-{
-	if (ps->size == ps->sizelist)
-	{
-		int* newdata = (int*)realloc(ps->data, (ps->sizelist + INIT_SIZE) * sizeof(int));
-		if (newdata != NULL)
-		{
-			ps->data = newdata;
-		}
-		else
-		{
-			return;
-		}
-		ps->sizelist += INIT_SIZE;
-	}
-}
-//尾插
-void insertPushBack(LL* ps,int x)
-{
-	CheckCapacity(ps);
-	ps->data[ps->size] = x;
-	ps->size++;
-}
+//#define INIT_SIZE 10
+////结构体
+//typedef struct lineList
+//{
+//	int* data;
+//	int size;
+//	int sizelist;
+//}LL;
+////初始化
+//void InitList(LL* ps)
+//{
+//	ps->data = NULL;
+//	ps->size = 0;
+//	ps->sizelist = 0;
+//}
+////扩容
+//void CheckCapacity(LL* ps)
+//{
+//	if (ps->size == ps->sizelist)
+//	{
+//		int* newdata = (int*)realloc(ps->data, (ps->sizelist + INIT_SIZE) * sizeof(int));
+//		if (newdata != NULL)
+//		{
+//			ps->data = newdata;
+//		}
+//		else
+//		{
+//			return;
+//		}
+//		ps->sizelist += INIT_SIZE;
+//	}
+//}
+////尾插
+//void insertPushBack(LL* ps,int x)
+//{
+//	CheckCapacity(ps);
+//	ps->data[ps->size] = x;
+//	ps->size++;
+//}
+//
+////打印
+//void print(LL* ps)
+//{
+//	for (int i = 0; i < ps->size; i++)
+//	{
+//		printf("%d ", ps->data[i]);
+//	}
+//	printf("\n");
+//}
+//
+//
+////分类
+//void classifyList(LL* ps)
+//{
+//	LL tmp;
+//	//tmp.data = NULL;
+//	//tmp.data = (int*)realloc(tmp.data,(ps->sizelist) * sizeof(int));
+//	InitList(&tmp);
+//	CheckCapacity(&tmp);
+//	tmp.size = ps->size;
+//	tmp.sizelist = ps->sizelist;
+//	int j = 0;
+//	for (int i = 0; i < ps->size; i++)
+//	{
+//		if (ps->data[i] < 0)
+//		{
+//			tmp.data[j] = ps->data[i];
+//			j++;
+//		}
+//	}
+//	for (int i = 0; i < ps->size; i++)
+//	{
+//		if (ps->data[i] == 0)
+//		{
+//			tmp.data[j] = ps->data[i];
+//			j++;
+//		}
+//	}
+//	for (int i = 0; i < ps->size; i++)
+//	{
+//		if (ps->data[i] > 0)
+//		{
+//			tmp.data[j] = ps->data[i];
+//			j++;
+//		}
+//	}
+//	*ps = tmp;
+//}
+//
+//
+//int main()
+//{
+//	LL ll;
+//	InitList(&ll);
+//	insertPushBack(&ll, 1);
+//	insertPushBack(&ll, 2);
+//	insertPushBack(&ll, -2);
+//	insertPushBack(&ll, 4);
+//	insertPushBack(&ll, 5);
+//	insertPushBack(&ll, -5);
+//	insertPushBack(&ll, -8);
+//	insertPushBack(&ll, -1);
+//	insertPushBack(&ll, -3);
+//	insertPushBack(&ll, -7);
+//	insertPushBack(&ll, 0);
+//	insertPushBack(&ll, 0);
+//	insertPushBack(&ll, 5);
+//
+//	print(&ll);
+//
+//	classifyList(&ll);
+//	print(&ll);
+//
+//
+//	return 0;
+//}
 
-//打印
-void print(LL* ps)
-{
-	for (int i = 0; i < ps->size; i++)
-	{
-		printf("%d ", ps->data[i]);
-	}
-	printf("\n");
-}
 
 
-//分类
-void classifyList(LL* ps)
-{
-	LL tmp;
-	//tmp.data = NULL;
-	//tmp.data = (int*)realloc(tmp.data,(ps->sizelist) * sizeof(int));
-	InitList(&tmp);
-	CheckCapacity(&tmp);
-	tmp.size = ps->size;
-	tmp.sizelist = ps->sizelist;
-	int j = 0;
-	for (int i = 0; i < ps->size; i++)
-	{
-		if (ps->data[i] < 0)
-		{
-			tmp.data[j] = ps->data[i];
-			j++;
-		}
-	}
-	for (int i = 0; i < ps->size; i++)
-	{
-		if (ps->data[i] == 0)
-		{
-			tmp.data[j] = ps->data[i];
-			j++;
-		}
-	}
-	for (int i = 0; i < ps->size; i++)
-	{
-		if (ps->data[i] > 0)
-		{
-			tmp.data[j] = ps->data[i];
-			j++;
-		}
-	}
-	*ps = tmp;
-}
 
 
-int main()
-{
-	LL ll;
-	InitList(&ll);
-	insertPushBack(&ll, 1);
-	insertPushBack(&ll, 2);
-	insertPushBack(&ll, -2);
-	insertPushBack(&ll, 4);
-	insertPushBack(&ll, 5);
-	insertPushBack(&ll, -5);
-	insertPushBack(&ll, -8);
-	insertPushBack(&ll, -1);
-	insertPushBack(&ll, -3);
-	insertPushBack(&ll, -7);
-	insertPushBack(&ll, 0);
-	insertPushBack(&ll, 0);
-	insertPushBack(&ll, 5);
-
-	print(&ll);
-
-	classifyList(&ll);
-	print(&ll);
 
 
-	return 0;
-}
 

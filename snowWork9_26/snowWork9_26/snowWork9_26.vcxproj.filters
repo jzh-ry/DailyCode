@@ -18,5 +18,8 @@
     <ClCompile Include="snowWork.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="snowWork10_9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
