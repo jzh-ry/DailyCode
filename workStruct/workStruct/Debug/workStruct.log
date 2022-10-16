@@ -1,2 +1,5 @@
-﻿  Text.cpp
+﻿  String.cpp
+E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(17,19): warning C4267: “=”: 从“size_t”转换到“char”，可能丢失数据
+E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(116,11): warning C4309: “=”: 截断常量值
+E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(128,11): warning C4309: “=”: 截断常量值
   workStruct.vcxproj -> E:\桌面\数据结构学习\workStruct\Debug\workStruct.exe

@@ -142,6 +142,7 @@
     <ClCompile Include="LinkList.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stark.cpp" />
+    <ClCompile Include="String.cpp" />
     <ClCompile Include="structWork.cpp" />
     <ClCompile Include="Text.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="StringStatic.h" />
     <ClInclude Include="structWork.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,7 +2,10 @@
 #include "LinkList.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "StringStatic.h"
 
+
+//≤‚ ‘À≥–Ú±Ì
 void TextlineList()
 {
 	LL ll;
@@ -22,7 +25,7 @@ void TextlineList()
 	printf("%d\n", numEmlm(ll));
 
 }
-
+//≤‚ ‘¡¥±Ì
 void TextLinkList()
 {
 	LL1* head = InitLinkList();
@@ -45,7 +48,7 @@ void TextLinkList()
 
 	DestoryList(head);
 }
-
+//≤‚ ‘’ª
 void TextStark()
 {
 	LS ls;
@@ -72,7 +75,7 @@ void TextStark()
 	
 
 }
-
+//≤‚ ‘∂”¡–
 void TextQueue()
 {
 	LQueue lq;
@@ -99,6 +102,72 @@ void TextQueue()
 }
 
 
+
+
+
+
+
+
+
+
+
+
+//≤‚ ‘¥Æ
+void TextStringStatic1()
+{
+	SString T;
+	SString S;
+	SString S1;
+	SString Sub;
+	char ch[] = "this is a work";
+	char ch1[] = "this is a dog";
+	StrAssign(T, ch);
+	StrAssign(S, ch1);
+
+
+	Concat(S1, T, S);
+	printString(S1);
+	printf("%d\n", StrLength(S1));
+
+
+	SubString(Sub, S1, 3, 10);
+	printString(Sub);
+
+
+	//printf("%d\n", StrLength(T));
+
+	/*int a = StrCompare(T, S);
+	printf("%d\n", a);*/
+
+
+	/*printString(T);
+	StrCopy(T, S);
+	printString(T);
+
+	printf("%d\n", StrEmpty(T));
+
+	DestroyString(T);
+	printf("%d\n", StrEmpty(T));
+	DestroyString(S);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main(void)
 {
 	//TextlineList();
@@ -107,6 +176,8 @@ int main(void)
 
 	//TextStark();
 
-	TextQueue();
+	//TextQueue();
+
+	TextStringStatic1();
 	return 0;
 }
