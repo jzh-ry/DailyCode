@@ -27,3 +27,13 @@ int StrLength(SString& T);
 void Concat(SString& S1, SString T,SString S);
 //用Sub返回串S的pos个字符起长度为len的子串
 void SubString(SString& Sub, SString S, int pos, int len);
+//从S中找到T，返回子串的位置
+int Index(SString& S, SString& T, int pos);
+//用V替换S中出现的所有与T相等的不重叠的子串
+//void Replace(SString& S, SString T, SString V);
+//在S的pos个字符前插入串T
+void StrInsert(SString& S, int pos, SString T);
+//删除S中pos个字符起，长度为len的子串
+void StrDelete(SString& S, int pos, int len);
+//清空串
+void ClearString(SString& S);

@@ -1,5 +1,68 @@
-﻿  String.cpp
-E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(17,19): warning C4267: “=”: 从“size_t”转换到“char”，可能丢失数据
-E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(116,11): warning C4309: “=”: 截断常量值
-E:\桌面\数据结构学习\workStruct\workStruct\String.cpp(128,11): warning C4309: “=”: 截断常量值
-  workStruct.vcxproj -> E:\桌面\数据结构学习\workStruct\Debug\workStruct.exe
+﻿  Queue.cpp
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,15): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,25): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(9,11): error C3646: “data”: 未知重写说明符
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(9,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,33): error C2061: 语法错误: 标识符“EmlmType”
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,1): error C2040: “EmlmType”:“int”与“int *”的间接寻址级别不同
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,10): error C2146: 语法错误: 缺少“;”(在标识符“FrontEmlm”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(35,33): error C2061: 语法错误: 标识符“EmlmType”
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(43,11): error C2039: "data": 不是 "LineQueue" 的成员
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(7): message : 参见“LineQueue”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(43,18): error C2065: “x”: 未声明的标识符
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(72,37): error C2039: "data": 不是 "LineQueue" 的成员
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(7): message : 参见“LineQueue”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(72,10): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(72,10): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(72,10): message : 缺失的可变参数 1 为格式字符串“%d”所需
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(114,19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(114,1): error C2040: “EmlmType”:“int”与“int *”的间接寻址级别不同
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(114,10): error C2146: 语法错误: 缺少“;”(在标识符“FrontEmlm”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(115,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.cpp(115,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+  Text.cpp
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,15): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,25): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6,25): error C2377: “EmlmType”: 重定义；typedef 不能由任何其他符号重载
+E:\桌面\数据结构学习\workStruct\workStruct\structWork.h(7): message : 参见“EmlmType”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(9,11): error C3646: “data”: 未知重写说明符
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(9,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,33): error C2061: 语法错误: 标识符“EmlmType”
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,1): error C2040: “EmlmType”:“int”与“int *”的间接寻址级别不同
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(35,10): error C2146: 语法错误: 缺少“;”(在标识符“FrontEmlm”的前面)
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(83,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(84,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(85,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(86,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(87,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(88,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(91,16): error C3861: “FrontEmlm”: 找不到标识符
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(96,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(97,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(98,18): error C2660: “InsertBack”: 函数不接受 2 个参数
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(25,6): message : 参见“InsertBack”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(100,17): error C3861: “FrontEmlm”: 找不到标识符
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(219,2): error C2371: “BTNode”: 重定义；不同的基类型
+E:\桌面\数据结构学习\workStruct\workStruct\Queue.h(6): message : 参见“BTNode”的声明
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(227,9): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(227,9): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(227,9): message : 缺失的可变参数 1 为格式字符串“%c”所需
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(240,9): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(240,9): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(240,9): message : 缺失的可变参数 1 为格式字符串“%c”所需
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(253,9): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(253,9): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+E:\桌面\数据结构学习\workStruct\workStruct\Text.cpp(253,9): message : 缺失的可变参数 1 为格式字符串“%c”所需
+  正在生成代码...

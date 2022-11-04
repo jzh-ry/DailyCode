@@ -59,33 +59,32 @@ int StrCompare(SString& T, SString& S)
 	}
 	if (T[0] > S[0])
 	{
+		printf("62行\n");
 		return 1;
 	}
 	else if (T[0] < S[0])
 	{
+		printf("66行\n");
 		return -1;
 	}
-	int i = 1;
-	while (T[i] != 0 && S[i] != 0)
+
+	for (int i = 1; i <= T[0]; i++)
 	{
 		if (T[i] > S[i])
 		{
 			return 1;
 		}
-		if (T[i] < S[i])
+		else if (T[i] < S[i])
 		{
 			return -1;
 		}
-		i++;
+		else
+		{
+			i++;
+		}
 	}
-	if (T[i] != 0)
-	{
-		return 1;
-	}
-	else if (S[i] != 0)
-	{
-		return -1;
-	}
+
+	
 	return 0;
 	
 }
@@ -140,14 +139,94 @@ void SubString(SString& Sub, SString S, int pos, int len)
 	Sub[0] = len;
 	for (int i = 1; i <= len; i++)
 	{
-		Sub[i] = S[i+pos-1];
+		Sub[i] = S[i + pos - 1];
 	}
 }
 
+//从S中找到T，返回子串的位置
+int Index(SString& S, SString& T, int pos)
+{
+	if (pos<1 || pos>S[0])
+	{
+		printf("pos 位置不正确\n");
+		return 0;
+	}
+	/*if (S[0] - pos < T[0]-1)
+	{
+		printf("pos 位置错误\n");
+		return 0;
+	}*/
+	int i = pos;
+	SString sub;
+	while (i <= (S[0] - T[0] + 1))
+	{	
+		SubString(sub, S, i, T[0]);
+		if (StrCompare(sub, T) == 0)
+		{
+			printString(sub);
+			return i;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return 0;
 
+}
 
+//用V替换S中出现的所有与T相等的不重叠的子串
 
+//void Replace(SString& S, SString& T, SString V)
+//{
+//	int pos = 1;
+//	while (pos <= S[0] - T[0])
+//	{
+//		pos = Index(S, T, 1);
+//		for (int i = 1; i <= V[0]; i++)
+//		{
+//			S[pos] = V[i];
+//			pos++;
+//		}
+//		int i = pos;
+//		while (i <= S[0]-(T[0]))
+//		{
+//
+//		}
+//	}
+//
+//
+//}
 
+//在S的pos个字符前插入串T
+void StrInsert(SString& S, int pos, SString T)
+{
+	for (int i = S[0]; i >= pos; i--)
+	{
+		S[i + T[0]] = S[i];
+	}
+	for (int i = 1; i <= T[0]; i++)
+	{
+		S[i+pos-1] = T[i];
+	}
+	S[0] += T[0];
+}
+
+//删除S中pos个字符起，长度为len的子串
+void StrDelete(SString& S, int pos, int len)
+{
+	for (int i = pos; i <= S[0]-len; i++)
+	{
+		S[i] = S[i + len];
+	}
+	S[0] -= len;
+}
+
+//清空串
+void ClearString(SString& S)
+{
+	S[0] = 0;
+}
 
 
 
